@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hp.mapper.UserInfoDao">
+<!--根据用户id在userInfo表中查询用户信息-->
+   <select id="selectById" resultType="com.hp.pojo.UserInfo" parameterType="int">
+       SELECT * from t_userinfo
+        <where>
+            userId = #{userId}
+        </where>
+   </select>
+
+</mapper>
